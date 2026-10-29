@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Loja de Tecnologia</title>
+
+  <style>
+    /* CSS - Define a cor de fundo da página e a fonte principal */
+    body {
+      background-color: #eaf2ff; /* Fundo azul claro */
+      font-family: Arial, sans-serif; /* Fonte padrão */
+      margin: 0; /* Remove a margem padrão do navegador */
+      padding: 0; /* Remove o preenchimento padrão */
+    }
+
+    /* CSS - Centraliza o conteúdo principal da página */
+    .container {
+      max-width: 900px; /* Limita a largura do conteúdo */
+      margin: 40px auto; /* Centraliza horizontalmente com espaço em cima e embaixo */
+      background-color: #ffffff; /* Fundo branco do bloco principal */
+      border-radius: 12px; /* Arredonda as bordas */
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); /* Adiciona sombra suave */
+      padding: 30px; /* Espaçamento interno */
+    }
+
+    /* CSS - Estiliza o título principal */
+    h1 {
+      color: #1d4ed8; /* Cor azul do texto */
+      font-size: 36px; /* Tamanho maior do texto */
+      text-align: center; /* Centraliza o título */
+      margin-bottom: 20px; /* Espaço abaixo do título */
+    }
+
+    /* CSS - Define o estilo dos parágrafos */
+    p {
+      color: #333333; /* Cor escura para os textos */
+      font-size: 18px; /* Tamanho da fonte */
+      line-height: 1.6; /* Espaço entre linhas */
+    }
+
+    /* CSS - Ajusta a imagem para ficar responsiva */
+    img {
+      width: 100%; /* A imagem ocupa a largura total do container */
+      max-height: 400px; /* Limita a altura da imagem */
+      object-fit: cover; /* Mantém a proporção da imagem sem distorcer */
+      border-radius: 10px; /* Arredonda cantos */
+      display: block; /* Faz a imagem se comportar como bloco */
+      margin: 20px auto; /* Centraliza a imagem */
+    }
+
+    /* CSS - Estiliza a lista de produtos */
+    ul {
+      background-color: #dbeafe; /* Fundo azul claro da lista */
+      border-radius: 8px; /* Bordas arredondadas */
+      padding: 20px 30px; /* Espaço interno */
+    }
+
+    /* CSS - Define o estilo dos itens da lista */
+    li {
+      color: #1e3a8a; /* Cor azul escura */
+      font-size: 18px; /* Tamanho dos itens */
+      margin-bottom: 10px; /* Espaço entre os itens */
+    }
+
+    /* CSS - Personaliza a aparência do botão */
+    button {
+      background-color: #2563eb; /* Cor de fundo azul */
+      color: white; /* Texto branco */
+      border: none; /* Remove a borda padrão */
+      border-radius: 8px; /* Arredonda o botão */
+      padding: 12px 24px; /* Espaçamento interno */
+      font-size: 18px; /* Tamanho da fonte */
+      cursor: pointer; /* Muda o cursor ao passar por cima */
+      transition: background-color 0.3s ease; /* Efeito suave ao mudar a cor */
+    }
+
+    /* CSS - Altera a cor do botão ao passar o mouse */
+    button:hover {
+      background-color: #1d4ed8; /* Cor mais escura ao passar o mouse */
+    }
+
+    /* CSS - Estilo da mensagem que aparece ao clicar no botão */
+    .mensagem {
+      display: none; /* Esconde a mensagem inicialmente */
+      margin-top: 20px; /* Espaço acima da mensagem */
+      background-color: #fef3c7; /* Fundo amarelo claro */
+      border: 1px solid #facc15; /* Borda amarela */
+      border-radius: 8px; /* Arredonda as bordas */
+      padding: 15px; /* Espaço interno */
+      color: #92400e; /* Cor do texto */
+      font-weight: bold; /* Deixa o texto em negrito */
+    }
+  </style>
+</head>
+
+<body>
+  <!-- HTML - Estrutura principal da página -->
+  <main class="container">
+    <!-- HTML - Título principal da página -->
+    <h1>Loja de Tecnologia</h1>
+
+    <!-- HTML - Primeiro parágrafo de apresentação -->
+    <p>Seja bem-vindo à nossa loja! Aqui você encontra produtos modernos, úteis e com qualidade para o seu dia a dia.</p>
+
+    <!-- HTML - Segundo parágrafo -->
+    <p>Trabalhamos com eletrônicos, acessórios e itens que tornam sua rotina mais fácil, conectada e prática.</p>
+
+    <!-- HTML - Imagem de produtos tecnológicos -->
+    <img src="https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=1200&q=80" alt="Produtos tecnológicos" />
+
+    <!-- HTML - Lista de produtos em destaque -->
+    <ul>
+      <li>Headphones sem fio</li>
+      <li>Smartwatch</li>
+      <li>Notebook moderno</li>
+      <li>Teclado mecânico</li>
+    </ul>
+
+    <!-- HTML - Botão que será usado para ativar a interação -->
+    <button id="botaoMensagem" type="button">Ver promoção</button>
+
+    <!-- HTML - Caixa de mensagem que será mostrada ao clicar no botão -->
+    <div id="mensagem" class="mensagem">
+      Promoção especial: aproveite 20% de desconto em todos os produtos da categoria de tecnologia!
+    </div>
+  </main>
+
+  <script>
+    // JavaScript - Seleciona o botão e a mensagem dentro da página
+    const botao = document.getElementById("botaoMensagem");
+    const mensagem = document.getElementById("mensagem");
+
+    // JavaScript - Adiciona um evento de clique ao botão
+    botao.addEventListener("click", function () {
+      // Verifica se a mensagem está escondida
+      if (mensagem.style.display === "none" || mensagem.style.display === "") {
+        mensagem.style.display = "block"; // Mostra a mensagem
+        botao.textContent = "Ocultar promoção"; // Muda o texto do botão
+      } else {
+        mensagem.style.display = "none"; // Esconde a mensagem
+        botao.textContent = "Ver promoção"; // Retorna o texto original
+      }
+    });
+  </script>
+</body>
+</html>

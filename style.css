@@ -1,0 +1,85 @@
+/* CSS - Define a cor de fundo geral da página e a fonte padrão */
+body {
+  background-color: #eaf2ff; /* Fundo azul-claro para deixar a página agradável */
+  font-family: Arial, sans-serif; /* Fonte padrão do texto */
+  margin: 0; /* Remove o espaçamento padrão do navegador */
+  padding: 0; /* Remove o preenchimento padrão */
+}
+
+/* CSS - Cria um bloco central com fundo branco e sombra */
+.container {
+  max-width: 900px; /* Limita a largura da página */
+  margin: 40px auto; /* Centraliza o conteúdo na tela */
+  background-color: #ffffff; /* Fundo branco */
+  border-radius: 12px; /* Arredonda os cantos */
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); /* Cria uma sombra suave ao redor */
+  padding: 30px; /* Espaçamento interno */
+}
+
+/* CSS - Personaliza o título principal */
+h1 {
+  color: #1d4ed8; /* Cor azul do título */
+  font-size: 36px; /* Tamanho maior do texto */
+  text-align: center; /* Centraliza o texto */
+  margin-bottom: 20px; /* Espaço abaixo do título */
+}
+
+/* CSS - Define a aparência dos parágrafos */
+p {
+  color: #333333; /* Cor escura para melhorar a legibilidade */
+  font-size: 18px; /* Tamanho da fonte */
+  line-height: 1.6; /* Espaçamento entre linhas */
+}
+
+/* CSS - Ajusta a imagem para ficar responsiva */
+img {
+  width: 100%; /* Faz a imagem ocupar toda a largura disponível */
+  max-height: 400px; /* Limita a altura da imagem */
+  object-fit: cover; /* Mantém a proporção da imagem sem distorcer */
+  border-radius: 10px; /* Arredonda os cantos da imagem */
+  display: block; /* Faz a imagem agir como bloco */
+  margin: 20px auto; /* Centraliza a imagem */
+}
+
+/* CSS - Estiliza a lista com fundo azul claro */
+ul {
+  background-color: #dbeafe; /* Cor de fundo da lista */
+  border-radius: 8px; /* Arredonda os cantos */
+  padding: 20px 30px; /* Espaçamento interno */
+}
+
+/* CSS - Define o estilo dos itens da lista */
+li {
+  color: #1e3a8a; /* Cor azul mais escura */
+  font-size: 18px; /* Tamanho da fonte dos itens */
+  margin-bottom: 10px; /* Espaço entre cada item */
+}
+
+/* CSS - Personaliza o botão com cor, borda e espaçamento */
+button {
+  background-color: #2563eb; /* Cor azul de fundo */
+  color: white; /* Texto em branco */
+  border: none; /* Remove a borda padrão */
+  border-radius: 8px; /* Arredonda o botão */
+  padding: 12px 24px; /* Espaçamento interno */
+  font-size: 18px; /* Tamanho da fonte */
+  cursor: pointer; /* Muda o cursor para um ponteiro ao passar o mouse */
+  transition: background-color 0.3s ease; /* Efeito de transição ao alterar a cor */
+}
+
+/* CSS - Muda a cor do botão quando o mouse passa por cima */
+button:hover {
+  background-color: #1d4ed8; /* Cor mais escura ao passar o mouse */
+}
+
+/* CSS - Estiliza a mensagem oculta que aparecerá ao clicar no botão */
+.mensagem {
+  display: none; /* Esconde a mensagem inicialmente */
+  margin-top: 20px; /* Espaço acima da mensagem */
+  background-color: #fef3c7; /* Fundo amarelo claro */
+  border: 1px solid #facc15; /* Borda amarela */
+  border-radius: 8px; /* Arredonda os cantos */
+  padding: 15px; /* Espaçamento interno */
+  color: #92400e; /* Cor do texto */
+  font-weight: bold; /* Deixa o texto em negrito */
+}
